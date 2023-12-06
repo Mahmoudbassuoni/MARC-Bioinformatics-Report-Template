@@ -1,0 +1,73 @@
+\documentclass[11pt]{article}
+\renewcommand{\thesection}{\arabic{section}.}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr} 
+\usepackage[margin=1 in, headsep=60pt, footskip=0pt]{geometry}
+\usepackage{natbib}
+\usepackage{xcolor}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\renewcommand{\headrulewidth}{0.4pt} % Set the headrule width
+\renewcommand{\headrule}{\hbox to\headwidth{\color{brown}\leaders\hrule height \headrulewidth\hfill}} %change the color of the line
+\fancyhead[L]{
+    \includegraphics[width=2cm]{Figures/image.png}\\
+        For Medical Services\\ % Replace with your first line of text
+        and Scientific Research   % Replace with your second line of text
+}
+\renewcommand{\footrulewidth}{0.4pt} % Set the footrule width
+\renewcommand{\footrule}{\hbox to\headwidth{\color{brown}\leaders\hrule height \footrulewidth\hfill}}
+\fancyfoot[C]{
+    27 Northern Expansions, Polaris Complex - 4th Industrial Zone, 6th of October City – Giza - Egypt \\
+    E-MAIL: info.research@marc-eg.org \\
+    PHONE: +201222937147 \\
+    page \thepage
+}
+
+
+\title{\includegraphics[width=5cm]{Figures/image.png} \\Input the TITLE HERE\\[1ex] \large \input{Subtitle.tex}}
+\date{December 2023} %input the title above and the subtitle at the subtitles.tex
+
+\begin{document}
+
+\maketitle
+
+\vspace{10cm} % Adjust the space as needed
+\vspace{1cm} % Adjust the space as needed
+\noindent \textbf{Signatures:}\\
+\noindent {$First Person Signature$} \dotfill\\ %replace it with the name
+\noindent {$First Person title$}\\[2ex] % Adjust vertical space as needed
+\noindent {$Second Person Signature$} \dotfill\\
+\noindent {$Second Person title$}
+
+\newpage % Start the table of contents on a new page
+\tableofcontents
+
+\newpage % Start the list of figures on a new page
+\listoffigures
+
+\newpage % Start the list of tables on a new page
+\listoftables
+\cleardoublepage %The first chapter should start on an odd page.
+
+
+
+
+\newpage
+\input{Chapters/Ch1.Introduction}
+\newpage
+\input{Chapters/Ch2.Methodology}
+\newpage
+\input{Chapters/Ch3.Results}
+\newpage
+\input{Chapters/Ch5.Appendix}
+
+% Bibliography
+\newpage
+\addcontentsline{toc}{section}{References} % Add References to TOC
+\bibliographystyle{abbrvnat} % Choose a bibliography style
+\bibliography{references} % References file
+
+\end{document}
