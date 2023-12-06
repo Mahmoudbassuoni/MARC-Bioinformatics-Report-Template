@@ -5,14 +5,14 @@
 \usepackage{fancyhdr} 
 \usepackage[margin=1 in, headsep=60pt, footskip=0pt]{geometry}
 \usepackage{natbib}
-\usepackage{xcolor}
 \usepackage{adjustbox}
+\usepackage[table,usenames,dvipsnames]{xcolor}
 
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \renewcommand{\headrulewidth}{0.4pt} % Set the headrule width
-\renewcommand{\headrule}{\hbox to\headwidth{\color{brown}\leaders\hrule height \headrulewidth\hfill}} %change the color of the line
+\renewcommand{\headrule}{\hbox to\headwidth{\color{brown}\leaders\hrule height \headrulewidth\hfill}}
 \fancyhead[L]{
     \includegraphics[width=2cm]{Figures/image.png}\\
         For Medical Services\\ % Replace with your first line of text
@@ -20,16 +20,27 @@
 }
 \renewcommand{\footrulewidth}{0.4pt} % Set the footrule width
 \renewcommand{\footrule}{\hbox to\headwidth{\color{brown}\leaders\hrule height \footrulewidth\hfill}}
-\fancyfoot[C]{
-    27 Northern Expansions, Polaris Complex - 4th Industrial Zone, 6th of October City – Giza - Egypt \\
-    E-MAIL: info.research@marc-eg.org \\
-    PHONE: +201222937147 \\
-    page \thepage
+
+\fancyfoot[L]{%
+    \begin{minipage}[b]{\textwidth}
+        \raggedright
+        Page \thepage
+    \end{minipage}
+}
+\fancyfoot[C]{%
+    \begin{minipage}[b]{\textwidth}
+        \centering
+        27 Northern Expansions, Polaris Complex - 4th Industrial Zone, 6th of October City – Giza - Egypt \\
+        E-MAIL: info.research@marc-eg.org \\
+        PHONE: +201222937147
+    \end{minipage}
 }
 
 
-\title{\includegraphics[width=5cm]{Figures/image.png} \\Input the TITLE HERE\\[1ex] \large \input{Subtitle.tex}}
-\date{December 2023} %input the title above and the subtitle at the subtitles.tex
+
+
+\title{\includegraphics[width=5cm]{Figures/image.png} \\Oryza sativa, WHOLE GENOME SEQUENCING (WGS)\\[1ex] \large \input{Subtitle.tex}}
+\date{December 2023}
 
 \begin{document}
 
@@ -38,10 +49,10 @@
 \vspace{10cm} % Adjust the space as needed
 \vspace{1cm} % Adjust the space as needed
 \noindent \textbf{Signatures:}\\
-\noindent {$First Person Signature$} \dotfill\\ %replace it with the name
-\noindent {$First Person title$}\\[2ex] % Adjust vertical space as needed
-\noindent {$Second Person Signature$} \dotfill\\
-\noindent {$Second Person title$}
+\noindent Dr. Suha Abdelaal \dotfill\\
+\noindent Genomic Scientist\\[2ex] % Adjust vertical space as needed
+\noindent Dr. Mahmoud Bassyouni \dotfill\\
+\noindent Senior Bioinformatician
 
 \newpage % Start the table of contents on a new page
 \tableofcontents
