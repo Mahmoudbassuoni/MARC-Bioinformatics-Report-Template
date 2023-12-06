@@ -22,3 +22,22 @@ pdflatex main
 bibtex main
 pdflatex main
 pdflatex main
+```
+
+This sequence compiles the document, processes the bibliography, and ensures all references are correctly included.
+
+Dependencies
+The document relies on several LaTeX packages, which are listed in the preamble of main.tex. These packages should be included in most LaTeX distributions by default. Key packages include:
+
+graphicx: For including images.
+fancyhdr: For custom headers and footers.
+natbib: For bibliography management.
+xcolor: For colored text and lines.
+Customization
+You can customize the document by editing main.tex and the respective chapters in the Chapters/ directory. Images and figures can be replaced or added in the Figures/ directory, and references can be updated in the references.bib file.
+
+Contact
+For any queries or contributions, please open an issue or a pull request in this repository.
+
+[Mahmoud Bassyouni]
+[mahmoud.bassyouni1@gmail.com]
